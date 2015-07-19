@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get --force-yes -y install git vim tree curl make g++
+LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get --force-yes -y install git vim tree curl make g++ zlib1g-dev
 
 cat > /etc/profile.d/editor.sh <<EOF
 export EDITOR=vim
