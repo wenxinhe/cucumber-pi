@@ -10,3 +10,6 @@ if [[ -f /etc/locale.gen ]]; then
 fi
 
 locale --all-locales | fgrep zh_CN.utf8 > /dev/null || locale-gen zh_CN.utf8 en_US.UTF-8
+
+echo "Asia/Shanghai" | tee /etc/timezone
+dpkg-reconfigure --frontend noninteractive tzdata
